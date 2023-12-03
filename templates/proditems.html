@@ -1,0 +1,14 @@
+<div class="border-bottom" style="margin-bottom: 32px; padding-bottom: 9px">
+    <div>
+
+        <h3 style="margin-bottom: 9px">{{ prod.p_name }}</h3>
+
+        
+        <div><b>Brand:</b> {{ prod.brand }}</div>
+        <div><b>Rating:</b> {{ prod.rating }}</div>
+        <div><b>Price:</b> {{ prod.price }}</div>
+
+    </div>
+    
+    <br><a href="/products/{{ prod.p_id }}" type="button" class="btn btn-outline-primary">View Product</a>
+</div>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{prod.p_name}} - Big Basket</title>
+    {% include 'bootstrap.html' %}
+    
+  </head>
+  <body>
+    {% include 'nav.html' %}
+    
+    <div class="container">
+      <h1 class="text-center mt-2 mb-4">
+        Big Basket - Easy Shopping!
+      </h1>
+
+      <br><h3>Product</h3>
+      <p class="mb-2">{{prod.p_name}}</p>
+      <p>{{prod.brand}}</p>
+
+      <br><h4>Description</h4>
+      <p>{{prod.description}}</p>
+      
+      <br>
+      <h4>Brand</h4>
+      <p>{{prod.brand}}</p>
+      <br>
+      <h4>Rating</h4>
+      <p>{{prod.rating}}</p>
+      <br><h4>Price ($)</h4>
+      <p>{{prod.price}}</p>
+      
+
+     
+      <br>
+      <br><a type="button" class="btn btn-outline-primary">Add to Cart</a>
+      
+     
+
+    </div>
+    
+  </body>
+</html>

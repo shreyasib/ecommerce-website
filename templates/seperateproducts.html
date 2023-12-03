@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Product List</title>
+    {% include 'bootstrap.html' %}
+
+    <!-- Add your CSS styles or include a stylesheet if needed -->
+</head>
+<body>
+    {% include 'nav.html' %}
+
+
+    <br>
+    <br><h1 style="text-align: center">All Products</h1>
+
+    {% for prod in products %}
+
+        <br>
+        <br>
+        <br><div class="product-container">
+            <h2>{{ prod.p_name }}</h2>
+            <p><b>Brand:</b> {{ prod.brand }}</p>
+            <p><b>Rating:</b> {{ prod.rating }}</p>
+            <p><b>Price:</b> ${{ prod.price }}</p>
+            <p><b>Description:</b> {{ prod.description }}</p>
+
+            <!-- Add to Cart button -->
+            <form action="{{ url_for('add_to_cart', product_id=prod.p_id) }}" method="post">
+                <button type="submit" class="btn btn-outline-primary">Add to Cart</button>
+            </form>
+        </div>
+        <hr>
+    {% endfor %}
+
+</body>
+</html>

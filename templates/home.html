@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Ecommerce Product Website</title>
+    {% include 'bootstrap.html' %}
+    <style>
+        #banner {
+          height: 360px;
+          width: 100%;
+          object-fit:cover;
+          margin-bottom: 16px;
+        }
+      </style>
+   
+</head>
+
+  <body>
+    {% include 'nav.html' %}
+    <div class="container">
+    <h1 class="text-center mt-2 mb-4" >Ecommerce Products Website</h1>
+
+    
+
+
+    <img class="img-fluid" id="banner" src="http://127.0.0.1:8080/static/grocery.jpeg">
+    <h1 class="mt-2 mb-4" > About Us </h1>
+    <p>
+        We're an extensive product catalog, sourced from India's largest online grocery store (Big Basket), offering over 27,000 products from more than 1,000 brands across various categories.
+    </p>
+    
+    <br>
+    <br><h1 class="mt-2 mb-4" >Our Products</h1>
+    <div> 
+        {% for prod in prods %}
+            {% include 'proditems.html' %}
+        {% endfor %}
+    </div>
+    
+    <button class="btn btn-primary btn-lg" >Click for more products!</button>
+    </div>
+
+  </body>
+
+</html>  
